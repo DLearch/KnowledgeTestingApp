@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="WPFApp.Controls.MenuControls.TestEditControls.SelectImageFile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFApp.Controls.MenuControls.TestEditControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Выбрать файл" VerticalAlignment="Bottom"
+                Click="ButtonSelect_Click"/>
+        
+        <Label Name="CtrlFileName" Grid.Row="1"
+               VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <Button Name="CtrlLoad" IsEnabled="False" Grid.Row="2" Content="Загрузить" Click="ButtonLoad_Click"/>
+    </Grid>
+</UserControl>

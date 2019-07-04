@@ -1,0 +1,7 @@
+C:\Users\Daniel\Desktop\TestingApp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Daniel\Desktop\TestingApp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Daniel\Desktop\TestingApp\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Daniel\Desktop\TestingApp\ConsoleApplication1\bin\Debug\ContractLib.dll
+C:\Users\Daniel\Desktop\TestingApp\ConsoleApplication1\bin\Debug\ContractLib.pdb
+C:\Users\Daniel\Desktop\TestingApp\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Daniel\Desktop\TestingApp\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

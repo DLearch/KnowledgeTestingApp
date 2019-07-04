@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="WPFApp.Controls.MenuControls.ProfileControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFApp.Controls.MenuControls"
+             xmlns:addCtrls="clr-namespace:WPFApp.Controls.AdditionalControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             HorizontalAlignment="Center" HorizontalContentAlignment="Center">
+    <WrapPanel Orientation="Vertical" VerticalAlignment="Center">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Основная информация " Margin="10 10 10 0" 
+                   FontSize="14" Grid.ColumnSpan="2" FontWeight="Bold"/>
+            <Separator Grid.Row="1" Grid.ColumnSpan="2" Background="LightGray"/>
+
+
+            <Label Content="Имя " Style="{StaticResource FieldNameLabel}" Grid.Row="2"/>
+            <Label Content="Email " Style="{StaticResource FieldNameLabel}" Grid.Row="3"/>
+            <Label Content="Пройденных тестов " Style="{StaticResource FieldNameLabel}" Grid.Row="4"/>
+            <Label Content="Пройденных тестов " Style="{StaticResource FieldNameLabel}" Grid.Row="5"/>
+            <Label Content="Показывать мой email" Style="{StaticResource FieldNameLabel}" Grid.Row="6"/>
+
+            <Label Name="CtrlName" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+            <Label Name="CtrlEmail" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
+            <Label Name="CtrlTestsCompleted" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"/>
+            <Label Name="CtrlTestsCreated" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center"/>
+
+            <CheckBox Grid.Column="1" Grid.Row="6" Margin="5" Name="CtrlEmailIsVisible" 
+                      Click="CtrlEmailIsVisible_Click" IsThreeState="False"/>
+        </Grid>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="1*" MinWidth="150"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Смена пароля " FontWeight="Bold" Margin="10 10 10 0" 
+                   FontSize="14" Grid.ColumnSpan="2"/>
+            <Separator Grid.Row="1" Grid.ColumnSpan="2" Background="LightGray"/>
+
+            <Label Content="Старый пароль " Grid.Row="2" HorizontalAlignment="Right"/>
+            <PasswordBox KeyDown="CtrlOldPassword_KeyDown" LostFocus="CtrlOldPassword_LostFocus" 
+                             Name="CtrlOldPassword" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+            <addCtrls:ErrorControl x:Name="CtrlErrorOldPassword" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Content="Новый пароль " Grid.Row="4" HorizontalAlignment="Right"/>
+            <PasswordBox KeyDown="CtrlNewPassword_KeyDown" LostFocus="CtrlNewPassword_LostFocus" 
+                             Name="CtrlNewPassword" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center"/>
+            <addCtrls:ErrorControl x:Name="CtrlErrorNewPassword" Grid.Row="5" Grid.Column="1"/>
+
+            <Label Content="Повторите пароль " Grid.Row="6" HorizontalAlignment="Right"/>
+            <PasswordBox KeyDown="CtrlReNewPassword_KeyDown" LostFocus="CtrlReNewPassword_LostFocus" 
+                             Name="CtrlReNewPassword" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center"/>
+            <addCtrls:ErrorControl x:Name="CtrlErrorReNewPassword" Grid.Row="7" Grid.Column="1"/>
+
+            <Label Name="CtrlChangePasswordMessage" Grid.Row="8" Grid.ColumnSpan="2"/>
+
+            <Button Content="Изменить пароль" VerticalAlignment="Center" 
+                        Grid.ColumnSpan="2" Grid.Row="9"
+                        HorizontalAlignment="Center"
+                        Click="CtrlChangePassword_Click"/>
+        </Grid>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Выход" FontWeight="Bold" Margin="10 10 10 0" FontSize="14" />
+            <Separator Grid.Row="1" Background="LightGray"/>
+
+            <CheckBox Name="CtrlClose" IsChecked="True" Grid.Row="2" Margin="5"
+                  Content="Закрыть окно после выхода."/>
+
+            <Button Content="Выйти" Grid.Row="3" HorizontalAlignment="Left" Margin="5"
+                        Click="CtrlSignOut_Click"/>
+        </Grid>
+    </WrapPanel>
+</UserControl>

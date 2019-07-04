@@ -1,0 +1,6 @@
+C:\Users\Daniel\Desktop\TestingApp\ContractLib\bin\Debug\ContractLib.dll
+C:\Users\Daniel\Desktop\TestingApp\ContractLib\bin\Debug\ContractLib.pdb
+C:\Users\Daniel\Desktop\TestingApp\ContractLib\obj\Debug\ContractLib.dll
+C:\Users\Daniel\Desktop\TestingApp\ContractLib\obj\Debug\ContractLib.pdb
+C:\Users\Daniel\Desktop\TestingApp\ContractLib\obj\Debug\ContractLib.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\TestingApp\ContractLib\obj\Debug\ContractLib.csproj.CoreCompileInputs.cache

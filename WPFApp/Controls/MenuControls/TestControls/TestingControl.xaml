@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WPFApp.Controls.MenuControls.TestControls.TestingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFApp.Controls.MenuControls.TestControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500"
+             MinWidth="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="auto" Name="CtrlColSplitterImage"/>
+            <ColumnDefinition Width="auto" Name="CtrlColImage"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="CtrlQuestionText" HorizontalAlignment="Center" 
+                       TextWrapping="Wrap" FontSize="20" MinWidth="200" Margin="20 40"/>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" 
+                          VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <StackPanel Name="CtrlAnswers" Margin="0 20" MinWidth="200"/>
+            </ScrollViewer>
+
+            <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Name="CtrlTime"/>
+
+            <Button Grid.Row="2" HorizontalAlignment="Right" Name="CtrlNext"
+                Content="Далее" Click="CtrlNext_Click" Grid.Column="1"/>
+            <Button Grid.Row="2" HorizontalAlignment="Left" Name="CtrlBackToMenu"
+                Content="Вернуться в меню" Click="CtrlBackToMenu_Click"/>
+        </Grid>
+
+        <GridSplitter Grid.Column="1" Style="{StaticResource VerticalSplitter}"/>
+
+        <Image VerticalAlignment="Center" HorizontalAlignment="Center" 
+               Name="CtrlImage" Grid.Column="2"/>
+    </Grid>
+</UserControl>

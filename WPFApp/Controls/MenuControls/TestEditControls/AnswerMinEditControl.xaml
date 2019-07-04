@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="WPFApp.Controls.MenuControls.TestEditControls.AnswerMinEditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFApp.Controls.MenuControls.TestEditControls"
+             xmlns:addCtrls="clr-namespace:WPFApp.Controls.AdditionalControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300"
+             Margin="4">
+    <Border Background="{StaticResource PublicColor}" Name="CtrlBorder" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <RadioButton Click="CtrlIsCorrectRadio_Click" Name="CtrlIsCorrectRadio" GroupName="AnswerGroup"  
+                     VerticalAlignment="Center" Margin="4"/>
+            <CheckBox Name="CtrlIsCorrectCheck" VerticalAlignment="Center" Margin="2 0" IsThreeState="False"/>
+
+            <TextBlock Name="CtrlText" VerticalAlignment="Center" Grid.Column="1"/>
+
+            <Button Content="❌" Click="ButtonRemove_Click"
+                VerticalAlignment="Center" Grid.Column="3"
+                Style="{StaticResource SymbolButton}"/>
+
+            <addCtrls:ErrorControl x:Name="CtrlErrorText" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+    </Border>
+</UserControl>

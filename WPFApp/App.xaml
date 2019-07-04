@@ -1,0 +1,19 @@
+﻿<Application x:Class="WPFApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ColorsDict.xaml" />
+                <ResourceDictionary Source="Styles/ButtonsDict.xaml" />
+                <ResourceDictionary Source="Styles/CheckBoxesDict.xaml" />
+                <ResourceDictionary Source="Styles/LabelsDict.xaml" />
+                <ResourceDictionary Source="Styles/ComboBoxesDict.xaml" />
+                <ResourceDictionary Source="Styles/TextBoxesDict.xaml" />
+                <ResourceDictionary Source="Styles/SplittersDict.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

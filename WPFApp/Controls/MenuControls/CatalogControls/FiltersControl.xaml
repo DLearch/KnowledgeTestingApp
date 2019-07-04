@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="WPFApp.Controls.MenuControls.CatalogControls.FiltersControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFApp.Controls.MenuControls.CatalogControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.ColumnSpan="3" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" Padding="10 0">
+            <StackPanel>
+                <Grid Height="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <CheckBox Content=" Категории" Click="CtrlCategoriesCheck_Click"
+                              Name="CtrlCategoriesCheck" Margin="6" FontWeight="Bold"
+                              FontSize="14"/>
+                    <StackPanel Name="CtrlCategoriesStack" Grid.Row="1" Margin="15, 0"/>
+                </Grid>
+                <Grid Height="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <CheckBox Content="Система оценивания" Click="CtrlRatingSystemsCheck_Click"
+                              Name="CtrlRatingSystemsCheck" Margin="6" FontWeight="Bold"
+                              FontSize="14" VerticalContentAlignment="Center"/>
+                    <StackPanel Name="CtrlRatingSystemsStack" Grid.Row="1" Margin="15, 0"/>
+                </Grid>
+            
+                <Label Content="Количество вопросов" Margin="6" FontWeight="Bold"
+                           FontSize="14" VerticalContentAlignment="Center"/>
+
+                <Label Content="От" Margin="10, 0"/>
+                <TextBox Name="CtrlMinQuestionsCount" PreviewTextInput="CtrlQuestionsCount_PreviewTextInput"
+                         VerticalAlignment="Center" Margin="15, 0"/>
+
+                <Label Content="До" Margin="10, 0"/>
+                <TextBox Name="CtrlMaxQuestionsCount" PreviewTextInput="CtrlQuestionsCount_PreviewTextInput"
+                         VerticalAlignment="Center" Margin="15 0 15 10"/>
+                <Grid Height="30"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button Name="CtrlApplyFilters" Content="✓" Click="CtrlApplyFilters_Click" 
+                Grid.Row="1" Grid.Column="1" Style="{StaticResource SymbolButton}" />
+        <Button Name="CtrlClearFilters" Content="🛇" Style="{StaticResource SymbolButton}" 
+                Click="CtrlClearFilters_Click" Grid.Row="1" Grid.Column="2"/>
+    </Grid>
+</UserControl>
